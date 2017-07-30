@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestWorkProject</string>
+    <string name="curse">Curse</string>
+    <string name="community">Community</string>
+    <string name="profile">Profile</string>
+    <string name="help">Help</string>
+</resources>

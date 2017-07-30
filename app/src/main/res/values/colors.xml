@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4a90e2</color>
+    <color name="colorPrimaryDark">#4281ca</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="buttonDeactivate">#3c74b5</color>
+    <color name="buttonActivate">#f6f6f6</color>
+    <color name="textDeactivate">#9db9da</color>
+    <color name="textActivate">#4a4a4a</color>
+    <color name="colorMenuLayout">#3a4f98</color>
+    <color name="colorTextMenuLayout">#c7c7cc</color>
+    <color name="colorTextName">#4a4a4a</color>
+    <color name="colorTextMessage">#797979</color>
+    <color name="colorTextTime">#c7c7cc</color>
+    <color name="colorWaitingMessage">#50c3e3</color>
+</resources>

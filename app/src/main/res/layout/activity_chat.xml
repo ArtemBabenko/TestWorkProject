@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_element_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <include
+                android:id="@+id/toolbar_chat"
+                layout="@layout/toolbar"/>
+
+            <RelativeLayout
+                android:id="@+id/item_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="17dp"
+                    android:background="@mipmap/ic_arrow_left"/>
+
+                <TextView
+                    android:id="@+id/chat_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/arrow"
+                    android:text="Chat"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:id="@+id/blank_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/new_chat"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp">
+
+                <com.flyco.tablayout.SegmentTabLayout
+                    android:id="@+id/segment_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/figure_button"
+                    app:tl_indicator_anim_enable="true"
+                    app:tl_indicator_bounce_enable="false"
+                    app:tl_indicator_color="@color/buttonActivate"
+                    app:tl_indicator_gravity="BOTTOM"
+                    app:tl_tab_padding="20dp"
+                    app:tl_textSelectColor="@color/textActivate"
+                    app:tl_textUnselectColor="@color/textDeactivate">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/transparent_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="Chat"
+                                android:textColor="@android:color/transparent"/>
+
+                            <TextView
+                                android:id="@+id/toolbar_message_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="11dp"
+                                android:layout_toRightOf="@id/transparent_chat"
+                                android:background="@drawable/figure_message"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="1"
+                                android:textColor="@android:color/white"
+                                android:textSize="12dp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/transparent_live_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="Live Chat"
+                                android:textColor="@android:color/transparent"/>
+
+                            <TextView
+                                android:id="@+id/toolbar_message_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="11dp"
+                                android:layout_toRightOf="@id/transparent_live_chat"
+                                android:background="@drawable/figure_message"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="15"
+                                android:textColor="@android:color/white"
+                                android:textSize="12dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.flyco.tablayout.SegmentTabLayout>
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/menu_layout"
+            android:layout_below="@+id/coordinator_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+        <include
+            android:id="@+id/menu_layout"
+            layout="@layout/menu_layout"/>
+    </RelativeLayout>
+
+</RelativeLayout>
